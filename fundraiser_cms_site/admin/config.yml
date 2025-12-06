@@ -1,7 +1,7 @@
 
 backend:
   name: github
-  repo: yourname/yourrepo
+  repo: IseKai-IseKai/Fundraiser-Draft
   branch: main
 media_folder: "uploads"
 public_folder: "/uploads"
