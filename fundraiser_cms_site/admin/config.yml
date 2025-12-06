@@ -1,31 +1,29 @@
-
 backend:
   name: github
   repo: IseKai-IseKai/Fundraiser-Draft
   branch: main
-media_folder: "uploads"
-public_folder: "/uploads"
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: "settings"
-    label: "Site Settings"
-    files:
-      - name: "content"
-        label: "Main Content"
-        file: "content.json"
+  - name: "content"
+    label: "Site Content"
+    file: "content.json"
+    format: "json"
+    fields:
+      - { label: "Site Title", name: "site_title", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Hero Title", name: "hero_title", widget: "string" }
+      - { label: "Hero Text", name: "hero_text", widget: "string" }
+      - { label: "Hero Image", name: "hero_image", widget: "image" }
+      - { label: "About Text", name: "about_text", widget: "text" }
+      - { label: "Goal Text", name: "goal_text", widget: "text" }
+      - { label: "Donate Text", name: "donate_text", widget: "text" }
+      - { label: "Donate Link", name: "donate_link", widget: "string" }
+      - { label: "Contact Text", name: "contact_text", widget: "text" }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
         fields:
-          - {label: "Site Title", name: "site_title", widget: "string"}
-          - {label: "Tagline", name: "tagline", widget: "string"}
-          - {label: "Hero Title", name: "hero_title", widget: "string"}
-          - {label: "Hero Text", name: "hero_text", widget: "text"}
-          - {label: "Hero Image", name: "hero_image", widget: "image"}
-          - {label: "About Text", name: "about_text", widget: "text"}
-          - {label: "Goal Text", name: "goal_text", widget: "text"}
-          - {label: "Donate Text", name: "donate_text", widget: "text"}
-          - {label: "Donate Link", name: "donate_link", widget: "string"}
-          - {label: "Contact Text", name: "contact_text", widget: "text"}
-          - label: "Gallery"
-            name: "gallery"
-            widget: list
-            fields:
-              - {label: "Image", name: "image", widget: image}
+          - { label: "Image", name: "image", widget: "image" }
