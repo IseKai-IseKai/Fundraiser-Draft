@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site_title }}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>{{ site_title }}</h1>
+  <p>{{ tagline }}</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#goal">Goal</a>
+  <a href="#donate">Donate</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>{{ hero_title }}</h1>
+  <p>{{ hero_text }}</p>
+  <img src="{{ hero_image }}" alt="Hero Image" class="hero-img">
+  <a class="donate-btn" href="#donate">Donate Now</a>
+</section>
+
+<section class="section" id="about">
+  <h2>About</h2>
+  <p>{{ about_text }}</p>
+</section>
+
+<section class="section" id="goal">
+  <h2>Our Goal</h2>
+  <p>{{ goal_text }}</p>
+</section>
+
+<section class="section" id="donate">
+  <h2>Donate</h2>
+  <p>{{ donate_text }}</p>
+  <a class="donate-btn" href="{{ donate_link }}">Donate Here</a>
+</section>
+
+<section class="section" id="photos">
+  <h2>Photos</h2>
+  {% for photo in gallery %}
+  <img src="{{ photo.image }}" class="gallery-img">
+  {% endfor %}
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>{{ contact_text }}</p>
+</section>
+
+<footer>
+  © {{ site_title }}
+</footer>
+
+</body>
+</html>
